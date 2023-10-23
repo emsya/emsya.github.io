@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #292d31;
+    --nav-color: #0dcaf0;
+    --text-color: #ffffff;    
+    --col-color: #212529;    
+    --warna-1: #3e4043;    
+}
+body{
+    color: #fff;
+    background: var(--body-color);
+}
+.col{
+    display: flex;
+    justify-content: center;
+    text-align: justify;  
+}
+.menu-atas{
+    border-bottom: 2px solid var(--nav-color);
+}
+.image-post img{
+    /* max-height: 100px; */
+    width: 100%;
+}
+.post{
+    /* background: #328f79; */
+    /* border: #0dcaf0 solid 2px; */
+    /* max-width: 750px; */
+    /* width: 100%; */
+    display: flex;
+    padding: 10px 0;
+    /* position: relative; */
+    /* height: 500px; */
+    /* overflow: hidden; */
+    justify-content: baseline;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.post a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.isi-post{
+    display: flex;
+    max-width: 200px;
+    /* height: 200px; */
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #0dcaf0;
+    margin: 5px;
+    /* position: relative; */
+    /* border-radius: 5px; */
+    background: var(--body-color);
+    
+}
+.isi-post:hover{
+    box-shadow: #0dcaf0 0 1px 2px;
+}
+.isi-post:nth-child(odd){
+    border-bottom: #f00dbf solid 2px;
+}
+.isi-post:nth-child(odd):hover{
+    box-shadow: #f00dbf 0 1px 2px;
+}
+
+.post .title-post{
+    background: var(--body-color);
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    font-weight:  500;
+    /* border-bottom: #0dcaf0 solid 2px; */
+}
+.readmore{
+    background: var(--warna-1);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin: 5px;
+    /* border-bottom: var(--nav-color) solid 1px; */
+}
+.readmore img{
+    height: 20px;
+    margin: 2px;
+}
+.sidebar{
+    border: 2px solid #0dcaf0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+    .sidebar{
+        border: 2px solid #f00d0d;
+        height: 100%;
+    }
+
+}

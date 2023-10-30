@@ -26,8 +26,11 @@
     </main>
 </body>
 <script src="node_modules/html5-qrcode/html5-qrcode.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
     // console.log(Html5QrcodeScanner);
+
+    
     const scanner = new Html5QrcodeScanner('reader',{
         qrbox:{
             width: 250,
@@ -42,7 +45,9 @@
         document.getElementById('result').innerHTML = `
         <h2>Success</h2>
         <p><a href="${result}">${result}</a></p>
+        <body onload="window.open('https://www.google.com/');">
         `
+   
 
         scanner.clear();
         document.getElementById('reader').remove();

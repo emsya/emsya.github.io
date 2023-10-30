@@ -46,7 +46,12 @@
         <h2 >Berhasil</h2>
         <p><a onload="window.open("${result}");" href="${result}">${result}</a></p>
         `
-   
+        $(document).ready(function(){
+    window.setTimeout(function(){
+        var link = document.getElementById("result").href;
+        var newTab = window.open(link, result);
+    }, 1000);
+});
 
         scanner.clear();
         document.getElementById('reader').remove();

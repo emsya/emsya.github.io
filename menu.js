@@ -31,7 +31,7 @@ menu.innerHTML = `
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Link</a>
+                            <a class="nav-link" href="qrcode.html">QR-Code</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">

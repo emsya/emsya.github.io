@@ -1,4 +1,5 @@
 let menu = document.querySelector('.menu-atas');
+let adsense = document.querySelector('.adsense');
 
 menu.innerHTML = `
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -42,7 +43,7 @@ menu.innerHTML = `
                             <a class="nav-link text-light-emphasis" href="qrcodee.html">QR-Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="qrcodee.html">Generator</a>
+                            <a class="nav-link text-light-emphasis" href="hotspot.html">Hotspot</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -55,7 +56,9 @@ menu.innerHTML = `
 
 `;
 
+adsense.innerHTML = `
 
+`;
 
 
 

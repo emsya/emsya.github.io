@@ -158,6 +158,16 @@ code,h5{
     padding-left: 10px;
     padding: 1px 10px;
 }
+footer{
+    /* background: #292D31; */
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    padding: 5px;
+    text-align: justify;
+}
 @media only screen and (max-width: 770px) {
     .sidebar{
         /* border: 2px solid #0df077; */

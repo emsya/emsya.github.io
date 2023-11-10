@@ -42,7 +42,7 @@ menu.innerHTML = `
                             <a class="nav-link text-light-emphasis" href="qrcodee.html">QR-Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="qrcode.html">Generator</a>
+                            <a class="nav-link text-light-emphasis" href="qrcodee.html">Generator</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">

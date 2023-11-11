@@ -43,6 +43,9 @@ menu.innerHTML = `
                             <a class="nav-link text-light-emphasis" href="qrcodee.html">QR-Code</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-light-emphasis" href="hotspot.html">Live Chat</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="hotspot.html">Hotspot</a>
                         </li>
                     </ul>

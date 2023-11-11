@@ -161,12 +161,20 @@ code,h5{
 footer{
     /* background: #292D31; */
     width: 100%;
-    /* display: flex; */
+    display: flex;
     /* justify-content: center; */
     /* align-items: center; */
     /* align-content: center; */
     padding: 5px;
     text-align: justify;
+}
+.post-dw{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.post-dw h5{
+    text-align: center;
 }
 @media only screen and (max-width: 770px) {
     .sidebar{

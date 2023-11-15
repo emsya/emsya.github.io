@@ -12,7 +12,7 @@ menu.innerHTML = `
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
                         <li class="nav-item ">
-                            <a class="nav-link text-light-emphasis" aria-current="page" href="/index">Home</a>
+                            <a class="nav-link text-light-emphasis" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="template.html

@@ -10,8 +10,29 @@
 
 </head>
 <style>
-    form {
+    body {
+        background-color: #fbfbfb;
+    }
+
+   
+
+    #btn {
+        color: #000;
+        text-decoration: none;
+    }
+    .col{
+        background: #fbfbfb;
+        justify-content: center;
         width: 200px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type=number]{
+        text-align: center;
     }
 </style>
 
@@ -25,18 +46,26 @@
     <div id="usdToIdrValue"></div>
     kurs<div id="nilaikurs"></div>
     <!-- bulat<div id="bulat"></div> -->
-    <div class="formbeli">
-        <form>
-            <label class="form-label" for="usd">Beli</label>
-            <input type="number" id="usd" class="form-control" placeholder="$" value="2">
-            <label class="form-label" for="usd">Total</label>
-            <div id="total" class="ambil mt-2"></div>
-            <button onclick="openbuy()" class="btn btn-info mt-2">Beli Sekarang</button>
-        </form>
-        <!-- https://api.whatsapp.com/send/?phone=6281312379190&text= hallo saya ingin membeli Paypal ${20}" -->
+    <div class="container rounded-3 bg-body shadow-sm p-2 d-flex justify-content-center">
+        <div class="col d-flex">
+            <div class="formbeli">
+                <form>
+                    <label class="form-label" for="usd">Masukan Jumlah Yang Ingin di Beli</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                        <input id="usd" type="number" class="form-control shadow-none" placeholder="Jumlah" value="1" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    
+                    <label class="form-label" for="usd">Total</label>
+                    <div id="total" class="ambil mt-2"></div>
+                    <button class="btn btn-info mt-2"><a id="btn">Beli Sekarang</a></button>
+                </form>
+                <!-- https://api.whatsapp.com/send/?phone=6281312379190&text= hallo saya ingin membeli Paypal ${20}" -->
+            </div>
+        </div>
     </div>
     <script>
-  addEventListener
+        addEventListener
 
 
     </script>
@@ -75,24 +104,33 @@
             // console.log(usd);
             // console.log(Math.round(bulat + 2000));
             let total = Math.round(idrValue + 2500) * usd;
-            
+            // let totalll = parseFloat(total.toFixed(0));
+
             // let num = 12345;
             let rupiahFormat = new Intl.NumberFormat('id-ID', {
                 style: 'currency',
                 currency: 'IDR',
             }).format(total);
-            
-            
-            let totall = document.getElementById('total').innerHTML = rupiahFormat;
-            
-            // console.log(rupiahFormat); 
 
-          
+
+            let totall = document.getElementById('total').innerHTML = rupiahFormat;
+            // =============================================
+            // let angka = 12222
+ 
+            
+            // let angkaBulat = rupiahFormat.substring(3);
+            // let totalll = parseFloat(angkaBulat.toFixed(0));
+            // console.log(angkaBulat+"1000"); 
+
+
+            let btn = document.getElementById('btn').setAttribute('href', "https://api.whatsapp.com/send/?phone=6281312379190&text= hallo saya ingin membeli Paypal" + " " + rupiahFormat);
+
+
         }
         // console.log(total+'iyaaa'); 
         // Panggil fungsi ini kembali setiap beberapa detik (misalnya, setiap 5 detik)
         setTimeout(updateExchangeRate, 1000);
-        
+
 
     }
 
@@ -102,10 +140,14 @@
 
     //   const bulat = document.getElementById('nilaikurs');
     //   const kurs = document.getElementById('bulat').innerHTML =  bulat;
-    function openbuy(){
-    window.open("https://api.whatsapp.com/send/?phone=6281312379190&text= hallo saya ingin membeli Paypal"+ "2000")
-   }
-//    console.log();
+    function openbuy() {
+        window.open("https://api.whatsapp.com/send/?phone=6281312379190&text= hallo saya ingin membeli Paypal" + "2000")
+    }
+    // let angka = 13.256789;
+// let angkaBulat = parseFloat(angka.toFixed(1))+"00"; // Memutuskan hingga dua desimal dan mengubahnya ke float
+
+// console.log(angkaBulat);
+    //    console.log();
 </script>
 
 

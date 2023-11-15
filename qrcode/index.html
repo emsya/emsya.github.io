@@ -40,13 +40,29 @@ button:hover {
     text-decoration: none !important; 
     color: #1d9bf0; 
 } 
-  
+.copy{
+    color: #000;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #c1c1c1; */
+}
+.copy a{
+    color: #fff;
+    text-decoration: none;    margin: 0 2px;
+    background: #1E90FF;
+    padding: 0 3px;
+    border-radius: 3px;
+
+}
 </style>
 <body >
     <main>
         <div id="reader"></div>
         <div id="result"></div>
     </main>
+    <p class="copy">Built with ❤️ using <a href="https://github.com/mebjas/html5-qrcode">mebjas/html5-qrcode</a> </p>
 </body>
 <script src="node_modules/html5-qrcode/html5-qrcode.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -60,6 +76,9 @@ button:hover {
             height: 250,
         },
         fps: 20,
+        rememberLastUsedCamera: true,
+        aspectRatio: 1.7777778,
+        showTorchButtonIfSupported: true
     });
 
     scanner.render(success, error);

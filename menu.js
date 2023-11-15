@@ -4,15 +4,15 @@ let adsense = document.querySelector('.adsense');
 menu.innerHTML = `
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid ">
-                <a class="navbar-brand text-info" href="index.html">EMSYA</a>
+                <a class="navbar-brand text-info" href="/index">EMSYA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
                         <li class="nav-item ">
-                            <a class="nav-link text-light-emphasis" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link text-light-emphasis" aria-current="page" href="/index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="template.html

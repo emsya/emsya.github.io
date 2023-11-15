@@ -32,8 +32,20 @@ body{
     /* max-height: 100px; */
     width: 100%;
 }
-code,h5{
+code{
     margin: 10px 0;
+}
+h5 a{
+    text-align: center;
+    border: #0dcaf0 1px solid;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 3px;
+
+}
+a{
+    text-align: left;
+    display: flex;
 }
 .inpost{
     flex-direction: column;

@@ -23,7 +23,8 @@
     </div>
     <!-- /menu -->
     <div class="container bg-dark p-4">
-        <h2>🔻Add Firewall Nat</h2> 
+        <span class="judul">🔻Add Firewall Nat 
+          <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span> 
         <div class="row-cols d-flex g-2 ppp-generate">
             <div class="col-3 isi-data">
             <form>
@@ -33,7 +34,7 @@
                 <input type="text" name="dst-port" id="dst-port" value="2416">
                 <p class="angka">❕Masukan angka yang terkecil</p>
                 <label for="to-address">🔵To-addresses</label>
-                <input type="text" name="to-address" id="to-address" value="50.50.50.14">
+                <input type="text" name="to-address" id="to-address" value="50.50.50.100">
                 <label for="to-port">🟡To-ports</label>
                 <select id="cars" name="cars">
                     <option value="allport">All Port</option>
@@ -51,9 +52,9 @@
             <div class="col hasil-data">
                 <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode()">Copy</button></div>
                 <div id="copy" class="hasil-generate">
-                    <p>/ip firewall nat <br>add action=dst-nat chain=dstnat comment="<span id="comment1">winbox-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port1">2415</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.14</span> to-ports=<span id="to-port1">8291</span></p>
-                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment2">Web-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port2">2416</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.14</span> to-ports=<span id="to-port2">80</span></p>                    
-                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment3">Api-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port3">2414</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.14</span> to-ports=<span id="to-port2">8728</span></p>
+                    <p>/ip firewall nat <br>add action=dst-nat chain=dstnat comment="<span id="comment1">winbox-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port1">2415</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port1">8291</span></p>
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment2">Web-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port2">2416</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">80</span></p>                    
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment3">Api-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port3">2414</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">8728</span></p>
             </div>
             </div>
         </div> 
@@ -75,14 +76,20 @@
     comment1.innerHTML = comment + "-Winbox";
     comment2.innerHTML = comment + "-Webfig";
     comment3.innerHTML = comment + "-Api";
-    // [].forEach.call(divs, function(comment1) {
-    // comment1.innerHTML = comment + "-Winbox";
-    // });
+ 
+    // dst-address================================
     const dstAddress = document.getElementById("dst-address").value;
     const dstAddress1 = document.querySelectorAll('#dst-address1');
     [].forEach.call(dstAddress1, function(comment1) {
     comment1.innerHTML = dstAddress;
     });
+    // To-address================================
+    const toAddress = document.getElementById("to-address").value;
+    const toAddress1 = document.querySelectorAll('#to-address1');
+    [].forEach.call(toAddress1, function(comment1) {
+    comment1.innerHTML = toAddress;
+    });
+    // dst-port==================================
     const dstPort = Number(document.getElementById("dst-port").value);
     const dstPort1 = document.querySelector('#dst-port1');
     const dstPort2 = document.querySelector('#dst-port2');

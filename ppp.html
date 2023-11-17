@@ -59,6 +59,16 @@
             </div>
         </div> 
     </div>
+    <div class="container bg-dark p-4">
+      <span class="judul">🔻Add l2tp-Client</span>
+      <div class="col col hasil-data">
+        <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode1()">Copy</button></div>
+        <div  class="hasil-generate">
+         <p id="copyy">interface l2tp-client add connect-to=<span id="dst-address1">45.77.47.52</span> user=trial password=1 disabled=no name=Remot comment="emsya.github.io"</p>
+        </div>
+        
+      </div>
+    </div>
     <div class="container bg-dark mt-2 px-4 py-2">
       <footer>
         <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
@@ -117,6 +127,16 @@
       window.getSelection().removeAllRanges(); // Clear previous selections
       window.getSelection().addRange(range); // Range to select text
       document.execCommand("copy"); // Copy the text to the clipboard
+      window.getSelection().removeAllRanges(); // Clear the selection
+      alert("Kode telah disalin ke clipboard!");
+    }
+        function copyCode1() {
+      const kodeElement = document.getElementById("copyy");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges(); // Clear previous selections
+      window.getSelection().addRange(range); // Range to select text
+      document.execCommand("copyy"); // Copy the text to the clipboard
       window.getSelection().removeAllRanges(); // Clear the selection
       alert("Kode telah disalin ke clipboard!");
     }

@@ -51,6 +51,9 @@ menu.innerHTML = `
                         <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="/mikrotik">Mikrotik</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-emphasis" href="/voucher">Voucher</a>
+                        </li>
                     </ul>
      
                 </div>

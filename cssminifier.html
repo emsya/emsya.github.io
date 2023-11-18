@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto add Generate</title>
+    <meta name="google-adsense-account" content="ca-pub-2189401836258981">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-night-owl.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<style>
+    .bungkus{max-width:700px;margin:0 auto;background:#2c3e50;width:100%;}.judul{width:100%;margin:5% auto 0 auto;background:#0DCAF0;font-family:'Lobster',cursive;position:relative;-moz-box-shadow:0 4px 4px rgba(0,0,0,0.4);-webkit-box-shadow:0 4px 4px rgba(0,0,0,0.4);box-shadow:0 4px 4px rgba(0,0,0,0.4);}.judul>strong{text-align:center;color:#fff;padding:18px;width:91%;display:block;font-size:24px;}.isinya{width:100%;height:361px;margin:0 auto;}.cssmin-in{width:47%;height:361px !important;float:left;margin-top:0px;margin-left:2px;}.cssmin-out{width:47%;height:361px !important;float:right;margin-top:0px;margin-right:2px;}textarea{width:99%;height:357px;border:none;resize:none;}.cssmin-btn{width:100%;background:#2C3E50;margin:0 auto !important;}.minify{width:15%;margin:2%;}.beautify{width:15%;margin:2%;}.btn{width:30%;border:0px;background:#f26262;padding:12px;color:white;cursor:pointer;border-radius:6px;}.btn:hover{background:#5ba435;}
+    </style>
+<body>
+    <!-- menu -->
+    <div class="menu-atas "></div>
+    <div class="adsensee">
+      <div class="container bg-dark">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2189401836258981"
+     crossorigin="anonymous"></script>
+      </div>
+    </div>
+    <!-- /menu -->
+    <div class="container bg-dark p-4">
+        
+<script src='https://cdn.rawgit.com/senchalabs/cssbeautify/master/cssbeautify.js'></script>
+<div class="bungkus">
+  <div class='judul' >
+    <strong>CSS Minifier And Beautifier</strong>
+        </div>
+  <div class="isinya">
+    <textarea placeholder="INPUT TO MINIFIER CSS" class="cssmin-in cssbeaut-out col-sm-5"></textarea>
+    <textarea placeholder="INPUT TO BEAUTIFIER CSS" class="cssmin-out cssbeaut-in col-sm-5 "></textarea>
+  </div>
+  <div class="cssmin-btn col-sm-2">
+      <button class="btn btn-primary minify" type="submit">Minify CSS</button>
+      <button class="btn btn-primary clear-code" type="submit">Clear All</button>
+      <button class="btn btn-primary beautify" type="submit">Beautify CSS</button>
+      </div>
+</div>
+<script>
+$(function() {
+  /*
+   * Just some styling helpers
+   */
+  var inputWidth = $('.col-sm-5').width();
+  $('textarea').height(inputWidth*(3/4));
+  $('.cssmin-btn').css('margin-top',inputWidth*(1/3)+'px');
+  $('.cssbeaut-btn').css('margin-top',inputWidth*(1/3)+'px');
+  
+  /*
+   * 
+   */
+  $('.minify').click(function() {
+    var input = $('.cssmin-in').val();
+    var output = input
+      .replace(/\/\*.*\*\/|\/\*[\s\S]*?\*\/|\n|\t|\v|\s{2,}/g, '')
+      .replace(/\s*\{\s*/g, '{')
+      .replace(/\s*\}\s*/g, '}')
+      .replace(/\s*\:\s*/g, ':')
+      .replace(/\s*\;\s*/g, ';')
+      .replace(/\s*\,\s*/g, ',')
+      .replace(/\s*\~\s*/g, '~')
+      .replace(/\s*\>\s*/g, '>')
+      .replace(/\s*\+\s*/g, '+')
+      .replace(/\s*\!\s*/g, ' !');
+    $('.cssmin-out').val(output);
+  });
+  $('.clear-code').click(function() {
+    $('.cssmin-in').val('');
+    $('.cssmin-out').val('');
+  });
+  $('.beautify').click(function() {
+    var beaut_input = $('.cssbeaut-in').val();
+    var beaut_output = cssbeautify(beaut_input, {
+      indent: '    ',
+      openbrace: 'end-of-line',
+      autosemicolon: true
+    });
+    $('.cssbeaut-out').val(beaut_output);
+  });
+  $('.beaut-clear-code').click(function() {
+    $('.cssbeaut-in').val('');
+    $('.cssbeaut-out').val('');
+  });
+});
+</script>
+
+    </div>
+
+    <div class="container bg-dark mt-2 px-4 py-2">
+      <footer>
+        <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
+ <a href='https://www.free-counters.org/'>free Hit Counter</a>
+  <script type='text/javascript' src='https://whomania.com/ctr?id=8783cbe0469a5bda9135a1f6897548be8988e607'></script>
+      </footer>
+      
+    </div>
+<!-- ================ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="menu.js"></script>
+</body>
+
+</html>

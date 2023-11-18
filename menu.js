@@ -54,6 +54,9 @@ menu.innerHTML = `
                         <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="/voucher">Voucher</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-emphasis" href="/cssminifier">CSS Minifier</a>
+                        </li>
                     </ul>
      
                 </div>

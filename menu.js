@@ -15,7 +15,7 @@ menu.innerHTML = `
                             <a class="nav-link text-light-emphasis" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="template.html
+                            <a class="nav-link text-light-emphasis" href="/template
                             ">Template</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -43,10 +43,10 @@ menu.innerHTML = `
                             <a class="nav-link text-light-emphasis" href="/qrcodee">QR-Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="hotspot.html">Live Chat</a>
+                            <a class="nav-link text-light-emphasis" href="/hotspot">Live Chat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="hotspot.html">Hotspot</a>
+                            <a class="nav-link text-light-emphasis" href="/hotspot">Hotspot</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light-emphasis" href="/mikrotik">Mikrotik</a>

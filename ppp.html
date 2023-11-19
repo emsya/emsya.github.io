@@ -28,6 +28,7 @@
         <div class="row-cols d-flex g-2 ppp-generate">
             <div class="col-3 isi-data">
             <form>
+              <h5>⬇️Add Firewall Nat⬇️</h5>
                 <label for="dst-address">🟢Dst-Address</label>
                 <input type="text" name="dst-address" id="dst-address" value="45.77.47.52">
                 <label for="dst-porrt">🔴Dst-Port</label>
@@ -45,6 +46,13 @@
 
                 <label for="comment">🟣Comment</label>
                 <input type="text" name="comment" id="comment" >
+                <h5>⬇️Add l2tp-Client⬇️</h5>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" >
+                <label for="user">User</label>
+                <input type="text" name="user" id="user" >
+                <label for="pass">Password</label>
+                <input type="text" name="pass" id="pass" >
                 
                 <input onclick="generate();" class="btn btn-primary mt-2" type="button" value="Submit">
             </form>

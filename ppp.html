@@ -77,6 +77,16 @@
         
       </div>
     </div>
+    <div class="container bg-dark p-4">
+      <span class="judul">🔻Add PPP Secret <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span>
+      <div class="col col hasil-data">
+        <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode2()">Copy</button></div>
+        <div  class="hasil-generate">
+         <p id="copyy2">ppp secret add name=<span id="name2">Remot</span> password=<span id="pass2">1234</span> local-address=<span id="localAddress">50.50.50.1</span> remote-address=<span id="to-address1">50.50.50.100</span> disabled=no comment="emsya.github.io"</p>
+        </div>
+        
+      </div>
+    </div>
     <div class="container bg-dark mt-2 px-4 py-2">
       <footer>
         <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
@@ -122,9 +132,14 @@
     // pass================================
     const pass = document.getElementById("pass").value;
     const pass1 = document.querySelector('#pass1').innerHTML = pass;
+    const pass2 = document.querySelector('#pass2').innerHTML = pass;
     // name================================
     const name = document.getElementById("name").value;
     const name1 = document.querySelector('#name1').innerHTML += "-" + name ;
+    const name2 = document.querySelector('#name2').innerHTML = name ;
+    // localAddress================================
+    const localAddress = document.getElementById("to-address").value;
+    const localAddress1 = document.querySelector('#localAddress').innerHTML =  localAddress.substr(0,9)+"1";
 
 };
 // scroll==================================
@@ -162,6 +177,16 @@ function topFunction() {
       window.getSelection().addRange(range); // Range to select text
       document.execCommand("copy"); // Copy the text to the clipboard
       window.getSelection().removeAllRanges(); // Clear the selection
+      alert("Kode telah disalin ke clipboard!");
+    }
+        function copyCode2() {
+      const kodeElement = document.getElementById("copyy2");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
       alert("Kode telah disalin ke clipboard!");
     }
 </script>

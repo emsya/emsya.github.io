@@ -287,13 +287,13 @@ footer{
 #dst-address1{
     color: chartreuse;
 }
-#to-address1,#pass1{
+#to-address1,#pass1,#pass2{
     color: #0074BA;
 }
-#to-port1,#to-port2,#to-port3,#name1{
+#to-port1,#to-port2,#to-port3,#name1,#name2{
     color: #FCD53F;
 }
-#dst-port1,#dst-port2,#dst-port3,#user1{
+#dst-port1,#dst-port2,#dst-port3,#user1,#localAddress{
     color: #F8312F;
 }
 

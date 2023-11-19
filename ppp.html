@@ -47,11 +47,11 @@
                 <label for="comment">🟣Comment</label>
                 <input type="text" name="comment" id="comment" >
                 <h5>⬇️Add l2tp-Client⬇️</h5>
-                <label for="name">Name</label>
+                <label for="name">🟡Name</label>
                 <input type="text" name="name" id="name" >
-                <label for="user">User</label>
+                <label for="user">🔴User</label>
                 <input type="text" name="user" id="user" >
-                <label for="pass">Password</label>
+                <label for="pass">🔵Password</label>
                 <input type="text" name="pass" id="pass" >
                 
                 <input onclick="generate();" class="btn btn-primary mt-2" type="button" value="Submit">
@@ -68,11 +68,11 @@
         </div> 
     </div>
     <div class="container bg-dark p-4">
-      <span class="judul">🔻Add l2tp-Client</span>
+      <span class="judul">🔻Add l2tp-Client <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span>
       <div class="col col hasil-data">
         <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode1()">Copy</button></div>
         <div  class="hasil-generate">
-         <p id="copyy">interface l2tp-client add connect-to=<span id="dst-address1">45.77.47.52</span> user=trial password=1 disabled=no name=Remot comment="emsya.github.io"</p>
+         <p id="copyy">interface l2tp-client add connect-to=<span id="dst-address1">45.77.47.52</span> user=<span id="user1">trial</span> password=<span id="pass1">1234</span> disabled=no name=<span id="name1">Remot</span> comment="emsya.github.io"</p>
         </div>
         
       </div>
@@ -81,7 +81,8 @@
       <footer>
         <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
  <a href='https://www.free-counters.org/'>free Hit Counter</a> <script type='text/javascript' src='https://whomania.com/ctr?id=8783cbe0469a5bda9135a1f6897548be8988e607'></script>
-      </footer>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/arrow.png"></button>
       
     </div>
 <!-- ================ -->
@@ -115,17 +116,32 @@
     dstPort1.innerHTML = dstPort;
     dstPort2.innerHTML = dstPort + 1;
     dstPort3.innerHTML = dstPort + 2;
-    // [].forEach.call(dstPort1, function(comment1) {
-    // comment1.innerHTML = dstPort;
-    // });
-    // const hasil = document.querySelector('.')
-    // document.querySelectorAll("#comment1")[0-3].innerHTML += comment;
-    
-    // const dstAddress = document.getElementById("dst-address").value;
-    // document.getElementById("dst-address1").innerHTML = dstAddress;
+    // user================================
+    const user = document.getElementById("user").value;
+    const user1 = document.querySelector('#user1').innerHTML = user;
+    // pass================================
+    const pass = document.getElementById("pass").value;
+    const pass1 = document.querySelector('#pass1').innerHTML = pass;
+    // name================================
+    const name = document.getElementById("name").value;
+    const name1 = document.querySelector('#name1').innerHTML += "-" + name ;
 
 };
-// const hasil = document.querySelector('.hasil-generate');
+// scroll==================================
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 </script>
 <script>
         function copyCode() {

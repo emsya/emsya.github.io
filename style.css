@@ -276,6 +276,9 @@ footer{
 .rpo{
     border-bottom: #0dcaf0 solid 2px;
 }
+#sidebar{
+    height: 100%;
+}
 #myBtn {
     display: none;
     position: fixed;

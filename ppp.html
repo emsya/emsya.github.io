@@ -30,7 +30,7 @@
             <form>
               <h5>⬇️Add Firewall Nat⬇️</h5>
                 <label for="dst-address">🟢Dst-Address</label>
-                <input type="text" name="dst-address" id="dst-address" value="45.77.47.52">
+                <input type="text" name="dst-address" id="dst-address" value="45.77.47.522">
                 <label for="dst-porrt">🔴Dst-Port</label>
                 <input type="text" name="dst-port" id="dst-port" value="2416">
                 <p class="angka">❕Masukan angka yang terkecil</p>
@@ -60,9 +60,9 @@
             <div class="col hasil-data">
                 <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode()">Copy</button></div>
                 <div id="copy" class="hasil-generate">
-                    <p>/ip firewall nat <br>add action=dst-nat chain=dstnat comment="<span id="comment1">winbox-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port1">2415</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port1">8291</span></p>
-                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment2">Web-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port2">2416</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">80</span></p>                    
-                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment3">Api-</span>" dst-address=<span id="dst-address1">45.77.47.52</span> dst-port=<span id="dst-port3">2414</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">8728</span></p>
+                    <p>/ip firewall nat <br>add action=dst-nat chain=dstnat comment="<span id="comment1">winbox-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port1">2415</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port1">8291</span></p>
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment2">Web-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port2">2416</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">80</span></p>                    
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment3">Api-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port3">2414</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">8728</span></p>
             </div>
             </div>
         </div> 
@@ -136,7 +136,7 @@
     const pass2 = document.querySelector('#pass2').innerHTML = pass;
     // name================================
     const name = document.getElementById("name").value;
-    const name1 = document.querySelector('#name1').innerHTML += "-" + name ;
+    const name1 = document.querySelector('#name1').innerHTML = "Remot-" + name ;
     const name2 = document.querySelector('#name2').innerHTML = name ;
     // localAddress================================
     const localAddress = document.getElementById("to-address").value;

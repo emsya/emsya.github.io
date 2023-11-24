@@ -29,7 +29,6 @@ body{
     border-bottom: 2px solid var(--nav-color);
 }
 .image-post img{
-    /* max-height: 100px; */
     width: 100%;
 }
 code{

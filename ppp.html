@@ -82,7 +82,7 @@
       <div class="col col hasil-data">
         <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode2()">Copy</button></div>
         <div  class="hasil-generate">
-         <p id="copyy2">ppp secret add name=<span id="name2">Remot</span> password=<span id="pass2">1234</span> local-address=<span id="localAddress">50.50.50.1</span> remote-address=<span id="to-address1">50.50.50.100</span> disabled=no comment="emsya.github.io"</p>
+         <p id="copyy2">ppp secret add name=<span id="name2">Remot</span> password=<span id="pass2">1234</span> local-address=<span id="localAddress">50.50.50.1</span> remote-address=<span id="to-address1">50.50.50.100</span> disabled=no comment="<span id="date"></span>"</p>
         </div>
         
       </div>
@@ -158,6 +158,8 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+const now = new Date();
+const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + now.getMonth()+ "-" + now.getFullYear()+ " JAM:" + now.getHours()+ ":" + now.getMinutes();
 </script>
 <script>
         function copyCode() {

@@ -166,20 +166,20 @@ const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + no
       const kodeElement = document.getElementById("copy");
       const range = document.createRange();
       range.selectNode(kodeElement);
-      window.getSelection().removeAllRanges(); // Clear previous selections
-      window.getSelection().addRange(range); // Range to select text
-      document.execCommand("copy"); // Copy the text to the clipboard
-      window.getSelection().removeAllRanges(); // Clear the selection
+      window.getSelection().removeAllRanges(); 
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
       alert("Kode telah disalin ke clipboard!");
     }
         function copyCode1() {
       const kodeElement = document.getElementById("copyy");
       const range = document.createRange();
       range.selectNode(kodeElement);
-      window.getSelection().removeAllRanges(); // Clear previous selections
-      window.getSelection().addRange(range); // Range to select text
-      document.execCommand("copy"); // Copy the text to the clipboard
-      window.getSelection().removeAllRanges(); // Clear the selection
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy"); 
+      window.getSelection().removeAllRanges();
       alert("Kode telah disalin ke clipboard!");
     }
         function copyCode2() {

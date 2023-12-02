@@ -17,11 +17,9 @@ sidebar.innerHTML = `
 </script>
                   <h4 class="rpo">🔻Recent Post</h4>
                  <ul class="list-sidebar">
-                    <li><a href="template.html">Template Login Page Hotspot</a></li>
-                    <li><a href="qrcode.html">Tutorial Pasang Qr-Code Scanner</a></li>
-                    <li><a href="template.html">Template Login Page Hotspot</a></li>
-                    <li><a href="template.html">Template Login Page Hotspot</a></li>
-                    <li><a href="template.html">Template Login Page Hotspot</a></li>
+                    <li><a href="/template">Template Login Page Hotspot</a></li>
+                    <li><a href/="qrcode">Tutorial Pasang Qr-Code Scanner</a></li>
+                    <li><a href="/mikrotik">Mikrotik Tutorial</a></li>
                  </ul>
 
                    </div>

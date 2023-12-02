@@ -172,14 +172,11 @@ a{
     padding: 1px 10px;
 }
 footer{
-    /* background: #292D31; */
     width: 100%;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* align-content: center; */
     padding: 5px;
     text-align: justify;
+    flex-direction: column;
 }
 .post-dw{
     display: flex;

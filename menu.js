@@ -65,10 +65,6 @@ menu.innerHTML = `
 
 `;
 
-adsense.innerHTML = `
-
-`;
-
 
 
 

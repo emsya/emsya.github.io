@@ -1,5 +1,4 @@
 let menu = document.querySelector('.menu-atas');
-let adsense = document.querySelector('.adsense');
 
 menu.innerHTML = `
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">

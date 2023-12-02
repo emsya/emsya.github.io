@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto queue Generate</title>
+    <meta name="google-adsense-account" content="ca-pub-2189401836258981">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-night-owl.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- menu -->
+    <div class="menu-atas "></div>
+    <div class="adsensee">
+      <div class="container bg-dark">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2189401836258981"
+     crossorigin="anonymous"></script>
+      </div>
+    </div>
+    <!-- /menu -->
+    <div class="container bg-dark p-4">
+        <span class="judul">🔻Add Queue Otomatis
+          <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span> 
+        <div class="row-cols d-flex g-2 ppp-generate">
+            <div class="col-3 isi-data">
+            <form>
+              <h5>⬇️🐳🐳🐳🐳⬇️</h5>
+                <label for="ip-address1">🟢IP Address</label>
+                <div class="ip-address"><input type="text" id="ip-address1" value="10">-<input type="text" id="ip-address2" value="254"></div>
+                <label for="name">🔴Name</label>
+                <input type="text" id="name" value="queue">
+                <label for="max-limit">🔵Max-Limit</label>
+                <div class="ip-address"><input type="text" id="max-limit" value="2M">/<input type="text" id="max-limit2" value="2M"></div>
+                <label for="trg">🟡Target</label>
+                <input type="text" id="trg" value="192.168.1">
+                <input onclick="generate();" class="btn btn-primary mt-2" type="button" value="Submit">
+            </form>
+            </div>
+            <div class="col hasil-data">
+                <div class="tab-copy"><h5 id="copied">www.emsya.github.io</h5><button onmousedown="copyCode()" onmouseup="copyback()">Copy</button></div>
+                <div id="copy" class="hasil-generate">
+                    <p>:for x from <span id="ip1">10</span> to <span id="ip2">254</span> do={/queue simple add name="<span id="queue">queue</span>-$x" max-limit=<span id="limit">2M/2M</span> target="<span id="target">192.168.1</span>.$x"}</p>
+            </div>
+            </div>
+        </div> 
+    </div>
+<!-- =========================================== -->
+    <div class="container bg-dark mt-2 px-4 py-2">
+      <footer>
+        <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
+ <a href='https://www.free-counters.org/'>free Hit Counter</a> <script type='text/javascript' src='https://whomania.com/ctr?id=8783cbe0469a5bda9135a1f6897548be8988e607'></script>
+</footer>
+<div class="foot">Copyright &copy  2020 - <script>document.write(new Date().getFullYear())</script> <a href="https://emsya.github.io/">EMSYA</a></div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/arrow.png"></button>
+      
+    </div>
+<!-- ================ -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+   
+    function generate() {   
+    // ip-address1================================
+    const ipAddress1 = document.getElementById("ip-address1").value;
+    const ipAddress2 = document.getElementById("ip-address2").value;
+    const ip1 = document.querySelector('#ip1');
+    const ip2 = document.querySelector('#ip2');
+    ip1.innerHTML = ipAddress1;
+    ip2.innerHTML = ipAddress2;
+    // name================================
+    const name = document.getElementById("name").value;
+    const queue = document.querySelector('#queue');
+    queue.innerHTML = name;
+    // maxLimit================================
+    const maxLimit = document.getElementById("max-limit").value;
+    const maxLimit2 = document.getElementById("max-limit2").value;
+    const limit = document.querySelector('#limit');
+    limit.innerHTML = maxLimit +"/"+ maxLimit2;
+    // name================================
+    const trg = document.getElementById("trg").value;
+    const target = document.querySelector('#target');
+
+    
+    if (trg.substr(-1)== ".") {
+        swal("Warning!", "Jangan ada Titik di Belakang 😱");
+    }else{
+    target.innerHTML = trg;
+    }
+
+};
+// scroll==================================
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+const now = new Date();
+const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + now.getMonth()+ "-" + now.getFullYear()+ " JAM:" + now.getHours()+ ":" + now.getMinutes();
+</script>
+<script>
+    const copied = document.getElementById("copied");
+    function copyback() {
+        // copied.innerHTML = `<h5 id="copied">www.emsya.github.io</h5>`;
+        setTimeout( function () {
+            copied.innerHTML = "www.emsya.github.io";
+            copied.removeAttribute("style");
+         }, 1000);
+    }
+        function copyCode() {      
+      const kodeElement = document.getElementById("copy");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges(); 
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      copied.innerHTML = "Berhasil di Copy";
+      copied.style = "color:red; font-size:1.2em;";
+    }
+      
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="menu.js"></script>
+</body>
+
+</html>

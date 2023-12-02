@@ -277,6 +277,14 @@ footer{
 .rpo{
     border-bottom: #0dcaf0 solid 2px;
 }
+.ip-address{
+    display: flex;
+    justify-content: space-between;
+}
+.ip-address input{
+    /* margin: 0 10px; */
+    width: 45%;
+}
 #sidebar{
     height: 100%;
 }
@@ -294,6 +302,7 @@ footer{
     padding: 15px;
     border-radius: 4px;
   }
+
 #myBtn img{
     height: 50px;
     transform: rotate(-90deg);
@@ -317,7 +326,18 @@ footer{
 #dst-port1,#dst-port2,#dst-port3,#user1,#localAddress{
     color: #F8312F;
 }
-
+#ip1,#ip2{
+    color: chartreuse;
+}
+#queue{
+    color:#F8312F;
+}
+#limit{
+    color:#0074BA;
+}
+#target{
+    color:#FCD53F;
+}
 
 
 @media only screen and (max-width: 770px) {

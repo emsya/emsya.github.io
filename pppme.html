@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto add Generate</title>
+    <meta name="google-adsense-account" content="ca-pub-2189401836258981">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-night-owl.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- menu -->
+    <div class="menu-atas "></div>
+    <div class="adsensee">
+      <div class="container bg-dark">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2189401836258981"
+     crossorigin="anonymous"></script>
+      </div>
+    </div>
+    <!-- /menu -->
+    <div class="container bg-dark p-4">
+        <span class="judul">🔻Add Firewall Nat 
+          <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span> 
+        <div class="row-cols d-flex g-2 ppp-generate">
+            <div class="col-3 isi-data">
+            <form>
+              <h5>⬇️Add Firewall Nat⬇️</h5>
+                <label for="dst-address">🟢Dst-Address</label>
+                <input type="text" name="dst-address" id="dst-address" value="45.77.47.52">
+                <label for="dst-porrt">🔴Dst-Port</label>
+                <input type="text" name="dst-port" id="dst-port" value="2416">
+                <p class="angka">❕Masukan angka yang terkecil</p>
+                <label for="to-address">🔵To-addresses</label>
+                <input type="text" name="to-address" id="to-address" value="50.50.50.100">
+                <label for="to-port">🟡To-ports</label>
+                <select id="cars" name="cars">
+                    <option value="allport">All Port</option>
+                    <option value="winbox">Winbox(8291)</option>
+                    <option value="api">Api(8728)</option>
+                    <option value="webfig">Webfig(80)</option>
+                  </select>
+
+                <label for="comment">🟣Comment</label>
+                <input type="text" name="comment" id="comment" >
+                <h5>⬇️Add l2tp-Client⬇️</h5>
+                <label for="name">🟡Name</label>
+                <input type="text" name="name" id="name" >
+                <label for="user">🔴User</label>
+                <input type="text" name="user" id="user" >
+                <label for="pass">🔵Password</label>
+                <input type="text" name="pass" id="pass" >
+                
+                <input onclick="generate();" class="btn btn-primary mt-2" type="button" value="Submit">
+            </form>
+            </div>
+            <div class="col hasil-data">
+                <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode()">Copy</button></div>
+                <div id="copy" class="hasil-generate">
+                    <p>/ip firewall nat <br>add action=dst-nat chain=dstnat comment="<span id="comment1">winbox-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port1">2415</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port1">8291</span></p>
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment2">Web-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port2">2416</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">80</span></p>                    
+                    <p>add action=dst-nat chain=dst-nat comment="<span id="comment3">Api-</span>" dst-address=<span id="dst-address1">45.77.47.521</span> dst-port=<span id="dst-port3">2414</span> protocol=tcp to-addresses=<span id="to-address1">50.50.50.100</span> to-ports=<span id="to-port2">8728</span></p>
+            </div>
+            </div>
+        </div> 
+    </div>
+    <div class="container bg-dark p-4">
+      <span class="judul">🔻Add l2tp-Client <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span>
+      <div class="col col hasil-data">
+        <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode1()">Copy</button></div>
+        <div  class="hasil-generate">
+         <p id="copyy">/interface l2tp-client add connect-to=<span id="dst-address1">45.77.47.52</span> user=<span id="user1">trial</span> password=<span id="pass1">1234</span> disabled=no name=<span id="name1">Remot</span> comment="emsya.github.io"</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container bg-dark p-4">
+      <span class="judul">🔻Add PPP Secret <button class="btn btn-info fw-bold" onclick="location.reload()">Refres</button></span>
+      <div class="col col hasil-data">
+        <div class="tab-copy"><h5>www.emsya.github.io</h5><button onclick="copyCode2()">Copy</button></div>
+        <div  class="hasil-generate">
+         <p id="copyy2">/ppp secret add name=<span id="name2">Remot</span> password=<span id="pass2">1234</span> local-address=<span id="localAddress">50.50.50.1</span> remote-address=<span id="to-address1">50.50.50.100</span> disabled=no comment="<span id="date"></span>"</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container bg-dark mt-2 px-4 py-2">
+      <footer>
+        <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
+ <a href='https://www.free-counters.org/'>free Hit Counter</a> <script type='text/javascript' src='https://whomania.com/ctr?id=8783cbe0469a5bda9135a1f6897548be8988e607'></script>
+</footer>
+<div class="foot">Copyright &copy  2020 - <script>document.write(new Date().getFullYear())</script> <a href="https://emsya.github.io/">EMSYA</a></div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/arrow.png"></button>
+      
+    </div>
+<!-- ================ -->
+<script>
+    function generate() {  
+    const comment = document.getElementById("comment").value;
+    const comment1 = document.querySelector('#comment1');
+    const comment2 = document.querySelector('#comment2');
+    const comment3 = document.querySelector('#comment3');
+    comment1.innerHTML = comment + "-Winbox";
+    comment2.innerHTML = comment + "-Webfig";
+    comment3.innerHTML = comment + "-Api";
+ 
+    // dst-address================================
+    const dstAddress = document.getElementById("dst-address").value;
+    const dstAddress1 = document.querySelectorAll('#dst-address1');
+    [].forEach.call(dstAddress1, function(comment1) {
+    comment1.innerHTML = dstAddress;
+    });
+    // To-address================================
+    const toAddress = document.getElementById("to-address").value;
+    const toAddress1 = document.querySelectorAll('#to-address1');
+    [].forEach.call(toAddress1, function(comment1) {
+    comment1.innerHTML = toAddress;
+    });
+    // dst-port==================================
+    const dstPort = Number(document.getElementById("dst-port").value);
+    const dstPort1 = document.querySelector('#dst-port1');
+    const dstPort2 = document.querySelector('#dst-port2');
+    const dstPort3 = document.querySelector('#dst-port3');
+    dstPort1.innerHTML = dstPort;
+    dstPort2.innerHTML = dstPort + 1;
+    dstPort3.innerHTML = dstPort + 2;
+    // user================================
+    const user = document.getElementById("user").value;
+    const user1 = document.querySelector('#user1').innerHTML = user;
+    // pass================================
+    const pass = document.getElementById("pass").value;
+    const pass1 = document.querySelector('#pass1').innerHTML = pass;
+    const pass2 = document.querySelector('#pass2').innerHTML = pass;
+    // name================================
+    const name = document.getElementById("name").value;
+    const name1 = document.querySelector('#name1').innerHTML = "Remot-" + name ;
+    const name2 = document.querySelector('#name2').innerHTML = name ;
+    // localAddress================================
+    const localAddress = document.getElementById("to-address").value;
+    const localAddress1 = document.querySelector('#localAddress').innerHTML =  localAddress.substr(0,9)+"1";
+
+};
+// scroll==================================
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+const month = ["Jan","Febr","Mar","Apr","May","Jun","Jul","Agt","Sep","Oct","Nov","Des"];
+// let bulan = month[d.getMonth()];
+const now = new Date();
+const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + month[now.getMonth()]+ "-" + now.getFullYear()+ " JAM:" + now.getHours()+ ":" + now.getMinutes();
+</script>
+<script>
+        function copyCode() {
+      const kodeElement = document.getElementById("copy");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges(); 
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      alert("Kode telah disalin ke clipboard!");
+    }
+        function copyCode1() {
+      const kodeElement = document.getElementById("copyy");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy"); 
+      window.getSelection().removeAllRanges();
+      alert("Kode telah disalin ke clipboard!");
+    }
+        function copyCode2() {
+      const kodeElement = document.getElementById("copyy2");
+      const range = document.createRange();
+      range.selectNode(kodeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      alert("Kode telah disalin ke clipboard!");
+    }
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="menu.js"></script>
+</body>
+
+</html>

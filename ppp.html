@@ -158,8 +158,10 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+const month = ["Jan","Febr","Mar","Apr","May","Jun","Jul","Agt","Sep","Oct","Nov","Des"];
+// let bulan = month[d.getMonth()];
 const now = new Date();
-const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + now.getMonth()+ "-" + now.getFullYear()+ " JAM:" + now.getHours()+ ":" + now.getMinutes();
+const date = document.getElementById('date').innerHTML = now.getDate()+ "-" + month[now.getMonth()]+ "-" + now.getFullYear()+ " JAM:" + now.getHours()+ ":" + now.getMinutes();
 </script>
 <script>
         function copyCode() {

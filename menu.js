@@ -1,7 +1,7 @@
 let menu = document.querySelector('.menu-atas');
 
 menu.innerHTML = `
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg " data-bs-theme="dark">
             <div class="container-fluid ">
                 <a class="navbar-brand text-info" href="/">EMSYA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"

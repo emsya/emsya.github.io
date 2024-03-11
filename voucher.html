@@ -16,13 +16,13 @@
     <!-- menu -->
     <div class="menu-atas "></div>
     <div class="adsensee">
-      <div class="container bg-dark">
+      <div class="container ">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2189401836258981"
      crossorigin="anonymous"></script>
       </div>
     </div>
     <!-- /menu -->
-    <div class="container bg-dark p-4">
+    <div class="container  p-4">
       <div class="col pt-1">
           <div class="row">
               <div class="col">
@@ -65,7 +65,7 @@
       </div>
   </div>
 
-    <div class="container bg-dark mt-2 px-4 py-2">
+    <div class="container bg-linear mt-2 px-4 py-2">
       <footer>
         <script type="text/javascript" src="https://www.counters-free.net/count/d9cd"></script><br>
  <a href='https://www.free-counters.org/'>free Hit Counter</a>
@@ -74,71 +74,6 @@
       
     </div>
 <!-- ================ -->
-<script>
-    function generate() {  
-    const comment = document.getElementById("comment").value;
-    const comment1 = document.querySelector('#comment1');
-    const comment2 = document.querySelector('#comment2');
-    const comment3 = document.querySelector('#comment3');
-    comment1.innerHTML = comment + "-Winbox";
-    comment2.innerHTML = comment + "-Webfig";
-    comment3.innerHTML = comment + "-Api";
- 
-    // dst-address================================
-    const dstAddress = document.getElementById("dst-address").value;
-    const dstAddress1 = document.querySelectorAll('#dst-address1');
-    [].forEach.call(dstAddress1, function(comment1) {
-    comment1.innerHTML = dstAddress;
-    });
-    // To-address================================
-    const toAddress = document.getElementById("to-address").value;
-    const toAddress1 = document.querySelectorAll('#to-address1');
-    [].forEach.call(toAddress1, function(comment1) {
-    comment1.innerHTML = toAddress;
-    });
-    // dst-port==================================
-    const dstPort = Number(document.getElementById("dst-port").value);
-    const dstPort1 = document.querySelector('#dst-port1');
-    const dstPort2 = document.querySelector('#dst-port2');
-    const dstPort3 = document.querySelector('#dst-port3');
-    dstPort1.innerHTML = dstPort;
-    dstPort2.innerHTML = dstPort + 1;
-    dstPort3.innerHTML = dstPort + 2;
-    // [].forEach.call(dstPort1, function(comment1) {
-    // comment1.innerHTML = dstPort;
-    // });
-    // const hasil = document.querySelector('.')
-    // document.querySelectorAll("#comment1")[0-3].innerHTML += comment;
-    
-    // const dstAddress = document.getElementById("dst-address").value;
-    // document.getElementById("dst-address1").innerHTML = dstAddress;
-
-};
-// const hasil = document.querySelector('.hasil-generate');
-</script>
-<script>
-        function copyCode() {
-      const kodeElement = document.getElementById("copy");
-      const range = document.createRange();
-      range.selectNode(kodeElement);
-      window.getSelection().removeAllRanges(); // Clear previous selections
-      window.getSelection().addRange(range); // Range to select text
-      document.execCommand("copy"); // Copy the text to the clipboard
-      window.getSelection().removeAllRanges(); // Clear the selection
-      alert("Kode telah disalin ke clipboard!");
-    }
-        function copyCode1() {
-      const kodeElement = document.getElementById("copyy");
-      const range = document.createRange();
-      range.selectNode(kodeElement);
-      window.getSelection().removeAllRanges(); // Clear previous selections
-      window.getSelection().addRange(range); // Range to select text
-      document.execCommand("copy"); // Copy the text to the clipboard
-      window.getSelection().removeAllRanges(); // Clear the selection
-      alert("Kode telah disalin ke clipboard!");
-    }
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

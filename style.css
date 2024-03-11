@@ -10,23 +10,36 @@
 
 :root {
     /* ===== Colors ===== */
-    --body-color: #292d31;
+    --body-color: #ffffff;
     --nav-color: #0dcaf0;
     --text-color: #ffffff;    
     --col-color: #212529;    
     --warna-1: #3e4043;    
+    --warna-2: #e9e9e9;    
 }
 body{
-    color: #fff;
+    color: #222;
     background: var(--body-color);
+}
+.container{
+    /* background:var(--warna-2); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.bg-linear{
+    background: hsla(242, 100%, 70%, 1);
+
+background: linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, hsla(177, 100%, 56%, 1) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, hsla(177, 100%, 56%, 1) 100%);
+
+background: -webkit-linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, hsla(177, 100%, 56%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6C67FF", endColorstr="#21FFF4", GradientType=1 );
 }
 .col{
     display: flex;
     justify-content: center;
     text-align: justify;  
-}
-.menu-atas{
-    border-bottom: 2px solid var(--nav-color);
 }
 .image-post img{
     width: 100%;
@@ -154,14 +167,24 @@ a{
     padding: 10px;
     letter-spacing: .01em;
 }
+.navbar{
+    background: hsla(242, 100%, 70%, 1);
+
+background: linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, rgb(22, 209, 200) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, rgb(22, 190, 182) 100%);
+
+background: -webkit-linear-gradient(45deg, hsla(242, 100%, 70%, 1) 0%, rgb(0, 223, 211) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6C67FF", endColorstr="#21FFF4", GradientType=1 );
+}
 #navbarScroll ul li{
     /* background: #f00d0d; */
-    border-right: #0dcaf0 solid 1px;
+    border-right: #fff solid 1px;
 }
 #navbarScroll ul{
-    /* background: #0dcaf0; */
     margin-left: 20px;
-    border-left: #0dcaf0 solid 1px;
+    border-left: #fff solid 1px;
 }
 .list-sidebar a{
     /* border-bottom: 1px solid #0dcaf0; */
@@ -182,6 +205,7 @@ a{
     padding: 1px 10px;
 }
 footer{
+    color: #fff;
     width: 100%;
     display: flex;
     padding: 5px;
@@ -268,6 +292,7 @@ footer{
     color: #0dcaf0;
 }
 .foot{
+    color: #e9e9e9;
     width: 100%;
     background: #140A29;
     padding: 5px 0;

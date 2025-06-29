@@ -3,67 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QR Code Scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
-    main{
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .container {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .header h1 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #reader {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    #result {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+    }
+
+    #result h2 {
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    #result a {
+        color: #1E88E5;
+        text-decoration: none;
+        word-break: break-all;
+        transition: color 0.3s;
+    }
+
+    #result a:hover {
+        color: #0D47A1;
+        text-decoration: underline;
+    }
+
+    button { 
+        padding: 12px 24px; 
+        border: none; 
+        outline: none; 
+        border-radius: 50px; 
+        color: white; 
+        font-size: 16px; 
+        font-weight: 500;
+        cursor: pointer; 
+        margin-top: 15px; 
+        margin-bottom: 10px; 
+        background-color: #1E88E5; 
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(30, 136, 229, 0.3);
+    } 
+  
+    button:hover { 
+        background-color: #1565C0; 
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(30, 136, 229, 0.4);
+    } 
+
+    button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(30, 136, 229, 0.3);
+    }
+  
+    #html5-qrcode-anchor-scan-type-change { 
+        text-decoration: none !important; 
+        color: #1E88E5; 
+        font-weight: 500;
+    } 
+
+    .btn-qr {
+        margin: 25px 0;
+    }
+
+    .btn-qr a {
+        text-decoration: none;
+        background: #1E88E5;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 500;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(30, 136, 229, 0.3);
+    }
+
+    .btn-qr a:hover {
+        background: #1565C0;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(30, 136, 229, 0.4);
+    }
+
+    .copy {
+        color: #666;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 20px;
+        font-size: 14px;
     }
-    #reader{
-        width: 600px;
-    }
-    #result{
-        text-align: center;
-        font-size: 1.5rem;
-    }
-    button { 
-    padding: 10px 20px; 
-    border: 1px solid #b2b2b2; 
-    outline: none; 
-    border-radius: 0.25em; 
-    color: white; 
-    font-size: 15px; 
-    cursor: pointer; 
-    margin-top: 15px; 
-    margin-bottom: 10px; 
-    background-color: DodgerBlue; 
-    transition: 0.3s background-color; 
-} 
-  
-button:hover { 
-    background-color: DodgerBlue; 
-} 
-  
-#html5-qrcode-anchor-scan-type-change { 
-    text-decoration: none !important; 
-    color: #1d9bf0; 
-} 
-.copy{
-    color: #000;
-    /* width: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: #c1c1c1; */
-}
-.copy a{
-    color: #fff;
-    text-decoration: none;    margin: 0 2px;
-    background: #1E90FF;
-    padding: 0 3px;
-    border-radius: 3px;
 
-}
+    .copy a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+        background: #1E88E5;
+        padding: 3px 8px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .copy a:hover {
+        background: #1565C0;
+    }
+
+    .copy i {
+        color: #E91E63;
+        margin: 0 5px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        #reader {
+            width: 100%;
+        }
+    }
 </style>
-<body >
-    <main>
-        <div id="reader"></div>
-        <div id="result"></div>
-    </main>
-    <p class="btn-qr" style="text-align: center;"><a href="intent://emsya.github.io/qrcode#Intent;scheme=http;action=android.intent.action.VIEW;end" style="text-decoration: none;background: #1d9bf0;color: #fff;padding: 5px;border-radius: 3px;">BUKA CHROME</a></p>
-    <p class="copy">Built with ❤️ using <a href="https://github.com/mebjas/html5-qrcode">mebjas/html5-qrcode</a> </p>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>QR Code Scanner</h1>
+            <p>Scan any QR code with your camera</p>
+        </div>
+        <main>
+            <div id="reader"></div>
+            <div id="result"></div>
+        </main>
+        <p class="btn-qr" style="text-align: center;">
+            <a href="intent://emsya.github.io/qrcode#Intent;scheme=http;action=android.intent.action.VIEW;end">
+                <i class="fab fa-chrome"></i> BUKA CHROME
+            </a>
+        </p>
+    </div>
+    <p class="copy">Built with <i class="fas fa-heart"></i> using <a href="https://github.com/mebjas/html5-qrcode">mebjas/html5-qrcode</a></p>
 </body>
 <script src="node_modules/html5-qrcode/html5-qrcode.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
